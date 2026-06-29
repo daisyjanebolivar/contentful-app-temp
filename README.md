@@ -43,9 +43,6 @@ Setup content type and create few entries
 
 Get Space ID, Access Token and explore code examples.
 
-Space ID - 4xabn5lcu0k4
-Access Token - 6wD0iTOe9VuK5z8JmDFBIVWYgnhyFnHz1ETGdSZdEbE
-
 #### Install SDK
 
 - npm install contentful
@@ -53,16 +50,16 @@ Access Token - 6wD0iTOe9VuK5z8JmDFBIVWYgnhyFnHz1ETGdSZdEbE
 #### Get Entries
 
 ```js
-import { createClient } from 'contentful';
+import { createClient } from "contentful";
 
 const client = createClient({
-  space: 'qz00uzgg3leh',
-  environment: 'master', // defaults to 'master' if not set
+  space: "qz00uzgg3leh",
+  environment: "master", // defaults to 'master' if not set
   accessToken: import.meta.env.VITE_API_KEY,
 });
 
 client
-  .getEntries({ content_type: 'projects' })
+  .getEntries({ content_type: "projects" })
   .then((response) => console.log(response.items))
   .catch(console.error);
 ```
