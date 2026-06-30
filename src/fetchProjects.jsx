@@ -6,6 +6,7 @@ const client = createClient({
   environment: "master",
   accessToken: import.meta.env.VITE_API_KEY,
 });
+console.log("token:", import.meta.env.VITE_API_KEY);
 
 export const useFetchProjects = () => {
   const [loading, setLoading] = useState(true);
